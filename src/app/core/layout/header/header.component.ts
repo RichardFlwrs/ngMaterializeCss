@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { PagesRoutes } from '../../routes/PagesRoutes';
 
 declare const M: any;
 
@@ -9,6 +10,8 @@ declare const M: any;
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   constructor() {}
+
+  public routes = new PagesRoutes().allRoutes;
 
   ngOnInit() {}
 

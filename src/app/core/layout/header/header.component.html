@@ -9,5 +9,8 @@
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-  <li><a href="#/home">Home</a></li>
+  <li *ngFor="let route of routes">
+    <!-- <a href="#/home">{{ route.title }}</a> -->
+    <a [href]="'#' + route.path" routerLinkActive="active">{{ route.title }}</a>
+  </li>
 </ul>
