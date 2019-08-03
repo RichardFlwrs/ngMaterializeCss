@@ -11,14 +11,12 @@ declare const M: any;
 export class HeaderComponent implements OnInit, AfterViewInit {
   constructor() {}
 
-  public routes = new PagesRoutes().allRoutes;
+  public routes = PagesRoutes;
 
   ngOnInit() {}
 
   ngAfterViewInit() {
     const elems = document.querySelectorAll('.sidenav');
-
-    console.log(elems);
 
     const options = {};
     const instances = M.Sidenav.init(elems, options);
